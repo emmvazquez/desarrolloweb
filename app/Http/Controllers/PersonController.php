@@ -38,5 +38,17 @@ class PersonController extends Controller
         dd("ya se insertó");
     }
 
+    public function actualizar($id)
+    {
+        return view('personas.actualizar')->with(
+            ['person' => Person::findOrFail($id)]);
+    }
+
+    public function update($id){
+        $person = Person::findOrFail($id);
+        $person->update(request()->all());
+    
+    }
+
 }
 

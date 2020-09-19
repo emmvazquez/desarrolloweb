@@ -30,13 +30,15 @@ Route::get('categorias/show/{IdCategoria}','Categorias@show')->name('categorias.
 
 
 
-
 // rutas personas
 Route::get('personas', 'PersonController@index')->name('personas.index');
 Route::get('personas/detalle/{Id}', 'PersonController@detalle')->name('personas.detalle');
 Route::get('personas/crear','PersonController@crear')->name('personas.crear');
 Route::post('personas/insert','PersonController@insert')->name('personas.insert');
 
+
+Route::get('personas/actualizar/{id}','PersonController@actualizar')->name('personas.actualizar');
+Route::match(['put','patch'],'PersonController/{person}','PersonController@update')->name('personas.update');
 
 
 //////

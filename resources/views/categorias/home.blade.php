@@ -1,6 +1,6 @@
-@extends('layouts.master')
+@extends('personas.plantilla')
 
-@section('content')
+@section('contenido')
 
   	<div class="container">
   		<div class="row">
